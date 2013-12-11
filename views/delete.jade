@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    form(method="POST",action="../../users")
+        label(for="id") Id a eliminar
+        input(type="text",name="id")
+        br
+        input(type="hidden",name="_method",value="delete")
+        br
+        input(type="submit",value="Eliminar usuario")
+
